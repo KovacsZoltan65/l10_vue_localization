@@ -1,0 +1,19 @@
+https://www.youtube.com/watch?v=ONRo8-i5Qsk&t=15s
+https://github.com/xiCO2k/laravel-vue-i18n
+
+composer create-project laravel/laravel l10_vue_localization
+
+composer require laravel/jetstream
+php artisan jetstream:install inertia
+
+php artisan migrate
+
+npm install
+npm install laravel-vue-i18n
+
+app.js
+    .use(i18nVue, {
+        resolve: lang => import(`../lang/${lang}.json`),
+    })
+
+npm run dev
